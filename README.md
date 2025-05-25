@@ -19,13 +19,15 @@ Dự án Flask giúp người dùng tìm kiếm thông tin động vật dựa t
 
 > 📌 Thay thế đường dẫn dưới đây bằng ảnh thực tế trong thư mục của bạn (ví dụ `static/demo.png`)
 
+![Giao diện đăng ký](static/screen/giaodiendangky.png)
+![Giao diện đăng nhập](static/screen/giaodiendangnhap.png)
 ![Giao diện ứng dụng](static/screen/giaodienchinh.png)
+![Giao diện khi tìm kiếm](static/screen/giaodienkhisearch.png)
+![Giao diện tìm kiếm theo tên](static/screen/giaodiensearchtheoten.png)
+![Giao diện posts](static/screen/giaodienposts.png)
 ![Giao diện ứng dụng](static/screen/giaodienchinh.png)
-![Giao diện ứng dụng](static/screen/giaodienchinh.png)
-![Giao diện ứng dụng](static/screen/giaodienchinh.png)
-![Giao diện ứng dụng](static/screen/giaodienchinh.png)
-![Giao diện ứng dụng](static/screen/giaodienchinh.png)
-![Giao diện ứng dụng](static/screen/giaodienchinh.png)
+![Giao diện profile](static/screen/giaodienprofile.png)
+![Giao diện lịch sử](static/screen/giaodienlichsu.png)
 
 ---
 
