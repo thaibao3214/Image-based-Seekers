@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}My Profile{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h3 class="card-title mb-0">Profile Information</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-3 text-center">
+                            <div class="avatar-wrapper mb-3">
+                                <img src="{{ url_for('static', filename='uploads/avatars/' + (user.avatar or 'default.png')) }}" 
+                                     class="rounded-circle img-thumbnail" 
+                                     style="width: 150px; height: 150px; object-fit: cover;"
+                                     alt="Profile Avatar">
+                            </div>
+                            <form method="POST" enctype="multipart/form-data" class="avatar-form">
+                                <div class="mb-2">
+                                    <input type="file" class="form-control form-control-sm" 
+                                           name="avatar" id="avatar" accept="image/*">
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-outline-primary">
+                                    Update Avatar
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Username</p>
+                                    <p class="h5">{{ user.username }}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-1">Email</p>
+                                    <p class="h5">{{ user.email }}</p>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <p class="text-muted mb-1">Account Status</p>
+                                    <span class="badge bg-{% if user.is_active %}success{% else %}danger{% endif %}">
+                                        {% if user.is_active %}Active{% else %}Inactive{% endif %}
+                                    </span>
+                                    {% if user.is_admin %}
+                                    <span class="badge bg-primary ms-1">Admin</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Change Password</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST">
+                                <div class="mb-3">
+                                    <label for="current_password" class="form-label">Current Password</label>
+                                    <input type="password" class="form-control" id="current_password" 
+                                           name="current_password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="new_password" class="form-label">New Password</label>
+                                    <input type="password" class="form-control" id="new_password" 
+                                           name="new_password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirm_password" class="form-label">Confirm New Password</label>
+                                    <input type="password" class="form-control" id="confirm_password" 
+                                           name="confirm_password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Change Password</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Recent Searches</h4>
+                        </div>
+                        <div class="card-body">
+                            {% if user.search_history %}
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Query Image</th>
+                                            <th>Results</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for search in user.search_history[-5:]|reverse %}
+                                        <tr>
+                                            <td>{{ search.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+                                            <td>
+                                                <img src="{{ search.query_image }}" alt="Query" 
+                                                     class="img-thumbnail" style="max-height: 50px;">
+                                            </td>
+                                            <td>Found {{ search.results|length }} similar images</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {% else %}
+                            <p class="text-muted">No search history yet.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
