@@ -1,9 +1,14 @@
-# 🐾 Image-Based Animal Search (Tìm kiếm ảnh động vật bằng AI)
+# 🐾 Image-Based-Seekers: Tìm kiếm hình ảnh động vật
 
 Dự án Flask giúp người dùng tìm kiếm thông tin động vật dựa trên hình ảnh, sử dụng AI để trích xuất đặc trưng từ ảnh và so khớp với cơ sở dữ liệu. Giao diện nền tối, hỗ trợ quản lý người dùng, bài viết, và phân quyền admin.
 
 ---
+## Thông tin nhóm: lớp DHKHDL18A Môn: Phát Triển Ứng Dụng
 
+- Nguyễn Đặng Thái Bảo-mssv: 22002605
+- Hồ Thiên Bảo-mssv: 22001975
+- Lương Công Phú Boy-mssv: 22002515
+---
 ## 🚀 Chức năng chính
 
 - 📷 Tìm kiếm động vật bằng cách tải ảnh lên
