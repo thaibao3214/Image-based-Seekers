@@ -1,4 +1,4 @@
-# 🐾 Image-Based-Seekers: Tìm kiếm hình ảnh động vật
+# Image-Based-Seekers: Tìm kiếm hình ảnh động vật
 
 Dự án Flask giúp người dùng tìm kiếm thông tin động vật dựa trên hình ảnh, sử dụng AI để trích xuất đặc trưng từ ảnh và so khớp với cơ sở dữ liệu. Giao diện nền tối, hỗ trợ quản lý người dùng, bài viết, và phân quyền admin.
 
@@ -9,18 +9,26 @@ Dự án Flask giúp người dùng tìm kiếm thông tin động vật dựa t
 - Hồ Thiên Bảo-mssv: 22001975
 - Lương Công Phú Boy-mssv: 22002515
 ---
-## 🚀 Chức năng chính
-
-- 📷 Tìm kiếm động vật bằng cách tải ảnh lên
-- 🧠 Sử dụng EfficientNetB2 để trích xuất đặc trưng hình ảnh
-- 🐍 Flask backend dễ tùy chỉnh
-- 👤 Quản lý người dùng (Admin / User)
-- ✍️ Quản lý bài viết về động vật
-- 🌙 Giao diện nền tối hiện đại
+## Phân công
+- Nguyễn Đặng Thái Bảo-22002605	-	Viết app.py(ứng dụng), tổng hợp lại và push github, slide
+- Hồ Thiên Bảo- 22001975	-	Viết code html(giao diện web), thuyết trình, làm báo cáo.
+- Lương Công Phú Boy-22002515	-	Chuẩn bị dữ liệu, train models, thuyết trình.
 
 ---
+##  Chức năng chính
 
-## 🖼️ Ảnh minh họa
+-  Tìm kiếm động vật bằng cách tải ảnh lên
+-  Sử dụng EfficientNetB2 để trích xuất đặc trưng hình ảnh
+-  Flask backend dễ tùy chỉnh
+-  Quản lý người dùng (Admin / User)
+-  Quản lý bài viết về động vật
+-  Giao diện nền tối hiện đại
+
+---
+## Cơ sở dữ liệu: Mongodb
+- cluster: MONGODB_URI=mongodb+srv://baoboybao:thaibao3214@clustersearchimge.eco6dhq.mongodb.net/clustersearchimge?retryWrites=true&w=majority
+---
+## Ảnh minh họa
 
 ![Giao diện đăng ký](static/screen/dangky.png)
 ![Giao diện đăng nhập](static/screen/dangnhap.png)
@@ -33,11 +41,12 @@ Dự án Flask giúp người dùng tìm kiếm thông tin động vật dựa t
 ![Giao diện lịch sử](static/screen/giaodienlichsu.png)
 
 ---
-
-## 🛠️ Cài đặt và chạy ứng dụng
+## Link video cùng với mô hình: 
+https://drive.google.com/drive/folders/1_kZ7GbcvqtgqWWVt1WaNpe19aoC5TRrJ
+## 🛠 Cài đặt và chạy ứng dụng
 
 ### Yêu cầu:
-- Python 3.8+
+- Python 3.10
 - pip
 - Git
 
